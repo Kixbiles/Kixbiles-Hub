@@ -1,7 +1,3 @@
--- Gui to Lua
--- Version: 3.2
-
--- Instances:
 
 local Main = Instance.new("Frame")
 local SwordLord = Instance.new("TextButton")
@@ -11,6 +7,8 @@ local Hoverboard = Instance.new("TextLabel")
 local FlingSpinner_2 = Instance.new("TextButton")
 
 --Properties:
+
+ScreenGui.Parent = game.CoreGui
 
 Main.Name = "Main"
 Main.Parent = game.StarterGui.ScreenGui
