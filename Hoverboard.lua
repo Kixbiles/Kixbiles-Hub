@@ -46,7 +46,7 @@ noplsmesh(yes)
 end
 end
 
-hatset('MeshPartAccessory','Right Leg',CFrame.new(),reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),-1+0*math.cos(sine/13))*ANGLES(RAD(-58+0*math.cos(sine/13)),RAD(-63+0*math.cos(sine/13)),RAD(-330+0*math.cos(sine/13))),1),false)
+hatset('Meshes/hvboardmeshAccessory','Left Leg',CFrame.new(),reanim['Meshes/hvboardmeshAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13),1+0*math.cos(sine/13))*ANGLES(RAD(86+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(2+0*math.cos(sine/13))),1),false)
 
 RJ = reanim.HumanoidRootPart.RootJoint
 RS = reanim.Torso['Right Shoulder']
@@ -94,42 +94,44 @@ local lookvel = lookvector / reanim.Humanoid.WalkSpeed
 local rightvel = rightvector / reanim.Humanoid.WalkSpeed
 if Root.Velocity.y > 1 then -- jump
 NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
-RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),3+2*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(100+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
-RS.C0 = RS.C0:Lerp(CF(1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-177+0*math.cos(sine/13))),.3)
-LS.C0 = LS.C0:Lerp(CF(-1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-194+0*math.cos(sine/13))),.3)
-RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
-LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
-elseif Root.Velocity.y < -1 then -- fall
-NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
-RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),3+2*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(100+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
-RS.C0 = RS.C0:Lerp(CF(1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(73+0*math.cos(sine/13))),.3)
-LS.C0 = LS.C0:Lerp(CF(-1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-73+0*math.cos(sine/13))),.3)
-RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
-LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
-elseif Root.Velocity.Magnitude < 2 then -- idle
-NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
-RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),3+2*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
-RS.C0 = RS.C0:Lerp(CF(1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
-LS.C0 = LS.C0:Lerp(CF(-1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),7+3*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(24+15*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-24+-15*math.cos(sine/13))),.3)
 RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
 LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
-reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),1+0*math.cos(sine/13))*ANGLES(RAD(-114+0*math.cos(sine/13)),RAD(-228+0*math.cos(sine/13)),RAD(-172+0*math.cos(sine/13))),.3)\
+reanim['Meshes/hvboardmeshAccessory'].Handle.AccessoryWeld.C0 = reanim['Meshes/hvboardmeshAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13),1+0*math.cos(sine/13))*ANGLES(RAD(86+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(2+0*math.cos(sine/13))),.3)
+elseif Root.Velocity.y < -1 then -- fall
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),7+3*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(24+15*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-24+-15*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+reanim['Meshes/hvboardmeshAccessory'].Handle.AccessoryWeld.C0 = reanim['Meshes/hvboardmeshAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13),1+0*math.cos(sine/13))*ANGLES(RAD(86+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(2+0*math.cos(sine/13))),.3)
+elseif Root.Velocity.Magnitude < 2 then -- idle
+NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),7+3*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+RS.C0 = RS.C0:Lerp(CF(1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(24+15*math.cos(sine/13))),.3)
+LS.C0 = LS.C0:Lerp(CF(-1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(-24+-15*math.cos(sine/13))),.3)
+RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))),.3)
+reanim['Meshes/hvboardmeshAccessory'].Handle.AccessoryWeld.C0 = reanim['Meshes/hvboardmeshAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13),1+0*math.cos(sine/13))*ANGLES(RAD(86+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(2+0*math.cos(sine/13))),.3)
 elseif Root.Velocity.Magnitude < 20 then -- walk
 NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13))*lookvel,RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))*rightvel),.3)
-RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),3+2*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(0+0*math.cos(sine/13))*lookvel,RAD(100+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))*rightvel),.3)
-RS.C0 = RS.C0:Lerp(CF(1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(0+0*math.cos(sine/13))*lookvel,RAD(0+0*math.cos(sine/13)),RAD(73+0*math.cos(sine/13))*rightvel),.3)
-LS.C0 = LS.C0:Lerp(CF(-1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(0+0*math.cos(sine/13))*lookvel,RAD(0+0*math.cos(sine/13)),RAD(-73+0*math.cos(sine/13))*rightvel),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),7+3*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(-25+0*math.cos(sine/13))*lookvel,RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))*rightvel),.3)
+RS.C0 = RS.C0:Lerp(CF(1.4+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(-27+0*math.cos(sine/13))*lookvel,RAD(-36+0*math.cos(sine/13)),RAD(24+15*math.cos(sine/13))*rightvel),.3)
+LS.C0 = LS.C0:Lerp(CF(-1.4+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(-52+0*math.cos(sine/13))*lookvel,RAD(0+0*math.cos(sine/13)),RAD(-24+-15*math.cos(sine/13))*rightvel),.3)
 RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(0+0*math.cos(sine/13))*lookvel,RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))*rightvel),.3)
 LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(0+0*math.cos(sine/13))*lookvel,RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))*rightvel),.3)
-reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),1+0*math.cos(sine/13))*ANGLES(RAD(-114+0*math.cos(sine/13)),RAD(-228+0*math.cos(sine/13)),RAD(-172+0*math.cos(sine/13))),.3)
+reanim['Meshes/hvboardmeshAccessory'].Handle.AccessoryWeld.C0 = reanim['Meshes/hvboardmeshAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13),1+0*math.cos(sine/13))*ANGLES(RAD(86+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(2+0*math.cos(sine/13))),.3)
 elseif Root.Velocity.Magnitude > 20 then -- run
 NECK.C0 = NECK.C0:Lerp(CF(0+0*math.cos(sine/13),1+0*math.cos(sine/13),0+0*math.cos(sine/13))*ANGLES(RAD(0+0*math.cos(sine/13))*lookvel,RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))*rightvel),.3)
-RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),3+2*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(0+0*math.cos(sine/13))*lookvel,RAD(100+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))*rightvel),.3)
-RS.C0 = RS.C0:Lerp(CF(1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(0+0*math.cos(sine/13))*lookvel,RAD(0+0*math.cos(sine/13)),RAD(73+0*math.cos(sine/13))*rightvel),.3)
-LS.C0 = LS.C0:Lerp(CF(-1.5+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(0+0*math.cos(sine/13))*lookvel,RAD(0+0*math.cos(sine/13)),RAD(-73+0*math.cos(sine/13))*rightvel),.3)
+RJ.C0 = RJ.C0:Lerp(CF(0+0*math.cos(sine/13),7+3*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(-25+0*math.cos(sine/13))*lookvel,RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))*rightvel),.3)
+RS.C0 = RS.C0:Lerp(CF(1.4+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(-27+0*math.cos(sine/13))*lookvel,RAD(-36+0*math.cos(sine/13)),RAD(24+15*math.cos(sine/13))*rightvel),.3)
+LS.C0 = LS.C0:Lerp(CF(-1.4+0*math.cos(sine/13),0.5+0*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(-52+0*math.cos(sine/13))*lookvel,RAD(0+0*math.cos(sine/13)),RAD(-24+-15*math.cos(sine/13))*rightvel),.3)
 RH.C0 = RH.C0:Lerp(CF(0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(0+0*math.cos(sine/13))*lookvel,RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))*rightvel),.3)
 LH.C0 = LH.C0:Lerp(CF(-0.5+0*math.cos(sine/13),-1+0*math.cos(sine/13),0+0*math.cos(sine/13)*lookvel)*ANGLES(RAD(0+0*math.cos(sine/13))*lookvel,RAD(0+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13))*rightvel),.3)
-reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0 = reanim['MeshPartAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(0+0*math.cos(sine/13),0+0*math.cos(sine/13),1+0*math.cos(sine/13))*ANGLES(RAD(-114+0*math.cos(sine/13)),RAD(-228+0*math.cos(sine/13)),RAD(-172+0*math.cos(sine/13))),.3)
+reanim['Meshes/hvboardmeshAccessory'].Handle.AccessoryWeld.C0 = reanim['Meshes/hvboardmeshAccessory'].Handle.AccessoryWeld.C0:Lerp(CF(-0.5+0*math.cos(sine/13),0+0*math.cos(sine/13),1+0*math.cos(sine/13))*ANGLES(RAD(86+0*math.cos(sine/13)),RAD(0+0*math.cos(sine/13)),RAD(2+0*math.cos(sine/13))),.3)
 end
 srv.RenderStepped:Wait()
 end
